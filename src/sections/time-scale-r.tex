@@ -18,14 +18,15 @@
         \pderivative{\polynomialP{1}{b}{x}}{b} &= 6 b - 6 b^2 - 3 x + 6 b x
     \end{align*}
     \begin{align*}
-        &\pderivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) = -3t + 3t^2 \\
-        &\pderivative{\polynomialP{1}{b}{x}}{b} (t, t) = 3t
+        &\pderivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = -3t + 3t^2 \\
+        &\pderivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 3t
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get classical derivative of odd polynomial
     $t^{2m+1}, t\in\mathbb{R}, \; x\in \Lambda^2 = \mathbb{R} \times \mathbb{R}, \; m\in\mathbb{N}$
     \[
         \derivative{t^3}{t}
-        = \pderivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) + \pderivative{\polynomialP{1}{b}{x}}{b}(t, t)
+        = \pderivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pderivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
         = 3t^2.
     \]
 \end{examp}
@@ -35,14 +36,15 @@
         &\pderivative{\polynomialP{2}{b}{x}}{x} = -15 b^2 + 30 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x, \\
         &\pderivative{\polynomialP{2}{b}{x}}{b} = 30 b^2 - 60 b^3 + 30 b^4 - 30 b x + 90 b^2 x - 60 b^3 x + 5 x^2 - 30 b x^2
         + 30 b^2 x^2 \\
-        &\pderivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t)) = -5 t^2 + 5 t^4 \\
-        &\pderivative{\polynomialP{2}{b}{x}}{b} (t, t) = 5 t^2
+        &\pderivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = -5 t^2 + 5 t^4 \\
+        &\pderivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 5 t^2
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get classical derivative of an odd polynomial
     $t^{2m+1}, \; t\in\mathbb{R}, \; x\in \Lambda^2 = \mathbb{R} \times \mathbb{R}, \; m\in\mathbb{N}$
     \[
         \derivative{t^5}{t}
-        = \pderivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t)) + \pderivative{\polynomialP{2}{b}{x}}{b}(t, t)
+        = \pderivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pderivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
         = 5t^4.
     \]
 \end{examp}
