@@ -58,8 +58,45 @@ To reproduce results, proceed as follows:
     \item Quantum time scale $\mathbb{T} = q^\mathbb{R} \times q^\mathbb{R}$:
     \begin{itemize}
         \item Example~\ref{time_scale_qn_example_1}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x * Global`q} in Mathematica package and execute definition
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, x, b]]]}
+            which produces $-3 b + 3 b^2$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, x, b]]]}
+            which produces $3 b - 2 b^2 + 3 b q - 2 b^2 q - 2 b^2 q^2 - 3 x + 3 b x + 3 b q x$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, t, sigma[t]]]]} which produces $-3 q t + 3 q^2 t^2$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, t, t]]]} which produces $3 q t + t^2 + q t^2 - 2 q^2 t^2$.
+            \item Execute \texttt{Expand[Simplify[mainTheorem[1]]]} which produces $t^2 + q t^2 + q^2 t^2$.
+        \end{itemize}
         \item Example~\ref{time_scale_qn_example_2}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x * Global`q} in Mathematica package and execute definition
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[2, x, b]]]}
+            which produces $-15 b^2 + 30 b^3 - 15 b^4 + 5 b x - 15 b^2 x + 10 b^3 x + 5 b q x -
+            15 b^2 q x + 10 b^3 q x$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[2, x, b]]]}
+            which produces $10 b^2 - 15 b^3 + 6 b^4 + 10 b^2 q - 15 b^3 q + 6 b^4 q +
+            10 b^2 q^2 - 15 b^3 q^2 + 6 b^4 q^2 - 15 b^3 q^3 + 6 b^4 q^3 +
+            6 b^4 q^4 - 15 b x + 30 b^2 x - 15 b^3 x - 15 b q x + 30 b^2 q x -
+            15 b^3 q x + 30 b^2 q^2 x - 15 b^3 q^2 x - 15 b^3 q^3 x + 5 x^2 -
+            15 b x^2 + 10 b^2 x^2 - 15 b q x^2 + 10 b^2 q x^2 + 10 b^2 q^2 x^2$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[2, t, sigma[t]]]]}
+            which produces $5 q t^2 - 10 q^2 t^2 - 15 q^2 t^3 + 15 q^3 t^3 + 10 q^3 t^4 -
+            5 q^4 t^4$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[2, t, t]]]}
+            which produces $-5 q t^2 + 10 q^2 t^2 + 15 q^2 t^3 - 15 q^3 t^3 + t^4 + q t^4 +
+            q^2 t^4 - 9 q^3 t^4 + 6 q^4 t^4$.
+            \item Execute \texttt{Expand[Simplify[mainTheorem[2]]]} which produces $t^4 + q t^4 + q^2 t^4 + q^3 t^4 + q^4 t^4$.
+        \end{itemize}
         \item Corollary~\ref{time_scale_qn_corollary_1}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x * Global`q} in Mathematica package and execute definition
+            \item Execute \texttt{Limit[Expand[Simplify[timeScaleDerivativeB[m, t, t]]], q -> 0]} for various
+            values of \texttt{m}.
+        \end{itemize}
     \end{itemize}
     \item Quantum power time scale $\mathbb{T} = \mathbb{R}^q \times \mathbb{R}^q$:
     \begin{itemize}
