@@ -6,8 +6,8 @@
     For every $t\in\mathbb{R}, \; x,b\in \Lambda^2 = \mathbb{R} \times \mathbb{R}, \; m\in\mathbb{N}$
     \[
         \derivative{t^{2m+1}}{t}
-        = \pderivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t))
-        + \pderivative{\polynomialP{m}{b}{x}}{b}(t, t),
+        = \pderivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pderivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t},
     \]
     where $\sigma(t) = t + \Delta t, \; \Delta t \to 0.$
 \end{cor}
