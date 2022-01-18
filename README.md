@@ -10,6 +10,9 @@
 
 ## What is all about
 
+Source code of the manuscript entitled
+"A study on partial dynamic equation on time scales involving derivatives of polynomials".
+
 ## How to use Mathematica package
 
 - Open the package file `AStudyOnDinamicEquationsPackage.m` in Wolfram Mathematica, I use version 13.0
@@ -19,4 +22,18 @@
 - Execute the line: `mainTheorem[m_] := Expand[timeScaleDerivativeX[m, t, sigma[t]] + timeScaleDerivativeB[m, t, t]]`
 - Continue executing according to the guideline below
 
-## Reproduce the results
+## Reproduce the results using Mathematica
+
+Few examples of the outcomes of the manuscript and how to reproduce them
+
+- Example for Z x Z time scale
+
+<p align="center">
+  <img src="img/time_scale_z_example_1.PNG" alt="timescale-z"/>
+</p>
+
+- Example for R x R time scale
+
+<p align="center">
+  <img src="img/time_scale_r_example_1.PNG" alt="timescale-z"/>
+</p>
