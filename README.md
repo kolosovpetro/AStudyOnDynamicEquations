@@ -11,7 +11,8 @@
 ## What is all about
 
 Source code of the manuscript entitled
-"A study on partial dynamic equation on time scales involving derivatives of polynomials".
+"A study on partial dynamic equation on time scales involving derivatives of polynomials"
+along with Mathematica programs in order to verify results.
 
 ## How to use Mathematica package
 
