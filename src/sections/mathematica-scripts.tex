@@ -9,6 +9,7 @@ To reproduce results, proceed as follows:
         \item Example~\ref{time_scale_z_example_1}:
         Execute the commands of Mathematica package
         \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x + 1}
             \item \texttt{timeScaleDerivativeX[1, x, b]} which produces $-3 b + 3 b^2$.
             \item \texttt{Expand[timeScaleDerivativeX[1, t, sigma[t]]]} which produces $3 t + 3 t^2$.
             \item \texttt{timeScaleDerivativeB[1, x, b]} which produces $1 - 6 b^2 + 6 b x$.
@@ -18,6 +19,7 @@ To reproduce results, proceed as follows:
         \item Example~\ref{time_scale_z_example_2}:
         Execute the commands of Mathematica package
         \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x + 1}
             \item \texttt{timeScaleDerivativeX[2, x, b]} which produces
             $5 b - 30 b^2 + 40 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x$.
             \item \texttt{Expand[timeScaleDerivativeX[2, t, sigma[t]]]} which produces $5 t + 10 t^2 + 10 t^3 + 5 t^4$.
@@ -25,12 +27,20 @@ To reproduce results, proceed as follows:
             \item \texttt{timeScaleDerivativeB[2, t, t]} which produces $1$.
             \item \texttt{mainTheorem[2]} which produces $1 + 5 t + 10 t^2 + 10 t^3 + 5 t^4$.
         \end{itemize}
-        \item Corollary~\ref{time_scale_z_corollary_1}:
-        \item Corollary~\ref{time_scale_z_corollary_2}:
     \end{itemize}
     \item Time scale of real numbers $\mathbb{T} = \mathbb{R} \times \mathbb{R}$:
     \begin{itemize}
         \item Example~\ref{time_scale_r_example_1}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x + Global`dx}
+            \item Execute \texttt{timeScaleDerivativeX[1, x, b]} which produces $-3 b + 3 b^2$.
+            \item Execute \texttt{Limit[Expand[timeScaleDerivativeB[1, x, b]], dx -> 0]}
+            which produces $6 b - 6 b^2 - 3 x + 6 b x$.
+            \item Execute \texttt{timeScaleDerivativeX[1, t, t]} which produces $-3 t + 3 t^2$.
+            \item Execute \texttt{Limit[Expand[timeScaleDerivativeB[1, t, t]], dx -> 0]} which produces $3t$.
+            \item Execute \texttt{Limit[mainTheorem[1], dx -> 0]} which produces $3t^2$.
+        \end{itemize}
         \item Example~\ref{time_scale_r_example_2}:
     \end{itemize}
     \item Quantum time scale $\mathbb{T} = q^\mathbb{R} \times q^\mathbb{R}$:
