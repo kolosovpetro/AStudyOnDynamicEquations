@@ -1,0 +1,22 @@
+Time scale derivative of polynomial $t^{2m+1}$ may be expressed as follows
+\begin{thm}
+    \label{main_theorem}
+    Let $\polynomialP{m}{b}{x}$ be a $2m+1-$degree integer-valued polynomial defined by~\eqref{eq:polynomial_p}.
+    Let be a two-dimensional time scale
+    $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 \colonequals \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$.
+    Let be $\mathbb{T}_1 = \mathbb{T}_2$.
+    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}$
+    \[
+        (t^{2m+1})^{\Delta} =
+        \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t)) +
+        \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
+    \]
+    where $\sigma(t) > t$ is forward jump operator.
+\end{thm}
+
+In extended form theorem 3.1 may be written as
+
+\begin{align*}
+    (t^{2m+1})^{\Delta} = \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (t, \sigma(t))
+    + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (t, t)
+\end{align*}

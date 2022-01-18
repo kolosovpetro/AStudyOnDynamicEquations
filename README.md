@@ -1,0 +1,1 @@
+# A study on partial dynamic equation on time scales involving derivatives of polynomials

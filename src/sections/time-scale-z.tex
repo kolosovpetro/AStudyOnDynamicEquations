@@ -1,0 +1,58 @@
+\begin{cor}
+    \label{finite_difference_case}
+    (Finite difference.)
+    Let be a two-dimensional time scale
+    $\Lambda^2 = \mathbb{Z} \times \mathbb{Z} \colonequals \{t=(x, b) \colon \; x\in \mathbb{Z}, \; b\in \mathbb{Z} \}$.
+    For every $t\in\mathbb{Z}, \; x,b\in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    \[
+        \finiteDifference{t^{2m+1}}
+        = \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t))
+        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
+    \]
+    where $\sigma(t) = t+1$.
+\end{cor}
+\begin{examp}
+    Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$ and let $m=1$, then
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = 3 b + 3 b^2 \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) = 3 t + 3 t^2\\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}= 1 - 6 b^2 + 6 b x\\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t) = 1
+    \end{align*}
+    Summing up previously obtained partial time-scale derivatives, we get the ordinary finite difference of odd polynomial
+    $t^{2m+1}, \; t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    \[
+        \finiteDifference{t^{3}}
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) + \pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t)
+        = 3 t^2 + 3 t + 1.
+    \]
+\end{examp}
+\begin{examp}
+    Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    and let $m=2$, then
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} = 5 b - 30 b^2 + 40 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} = 1 + 30 b^4 - 60 b^3 x + 30 b^2 x^2 \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t)) = 5 t + 10 t^2 + 10 t^3 + 5 t^4 \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b}(t, t) = 1
+    \end{align*}
+    Summing up previously obtained partial time-scale derivatives, we get time ordinary finite difference of odd polynomial
+    $t^{2m+1}, \; t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    \[
+        \finiteDifference{t^{5}}
+        = \pTsDerivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t)) + \pTsDerivative{\polynomialP{2}{b}{x}}{b}(t, t)
+        = 1 + 5 t + 10 t^2 + 10 t^3 + 5 t^4.
+    \]
+\end{examp}
+\begin{cor}
+    For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    \[
+        \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t)) = \sum_{r=1}^{2m} \binom{2m+1}{r} t^{r}
+    \]
+\end{cor}
+\begin{cor}
+    For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    \[
+        \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t) = 1
+    \]
+\end{cor}
