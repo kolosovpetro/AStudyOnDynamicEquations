@@ -5,14 +5,44 @@ Time scale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
     Let be a two-dimensional time scale
     $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 = \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$.
     Let be $\mathbb{T}_1 = \mathbb{T}_2$.
-    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}$
+    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}, \; m = const$
     \[
-        (t^{2m+1})^{\Delta}_{t} =
-        \frac{\partial \mathbf{P}_b^m(x)}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}+
-        \frac{\partial \mathbf{P}_b^m(x)}{\Delta b} \bigg |_{x = t, \; b = t}, \quad m = 0,1,2,\dots,
+        (t^{2m+1})^{\Delta} =
+        \frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}+
+        \frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t}, \quad m = 0,1,2,\dots,
     \]
-    where $\sigma(t) > t$ is forward jump operator.
+    where
+    \begin{itemize}
+        \setlength\itemsep{1em}
+        \item  $\sigma(t) > t$ is forward jump operator,
+
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}$
+        is the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$ with respect to the variable $x$, evaluated at $x = t, \; b = \sigma(t)$,
+
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t}$
+        is the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$ with respect to the variable $b$, evaluated at $x = t, \; b = t$.
+    \end{itemize}
 \end{thm}
+In other words, theorem ~\ref{main_theorem} says
+\begin{center}
+    \begin{quotation}
+        For every odd-exponent polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
+        of the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$
+        with respect to the variable
+        $x$,
+        evaluated at
+        $x = t, \; b = \sigma(t)$
+        and the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$
+        with respect to the variable
+        $b$,
+        evaluated at
+        $x = t, \; b = t$.
+    \end{quotation}
+\end{center}
 
 In extended form theorem ~\ref{main_theorem} may be written as
 
