@@ -36,7 +36,7 @@ A[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 L[m_, n_, k_] := Sum[A[m, r] * k^r * (n - k)^r, {r, 0, m}];
 P[m_, n_, b_] := Sum[L[m, n, k], {k, 0, b - 1}];
 
-sigma[x_] := x * Global`q;
+sigma[x_] := Global`q * x ^ Global`j;
 
 timeScaleDifferenceX[m_, x_, b_] := (P[m, sigma[x], b] - P[m, Global`t, b]) / (sigma[x] - Global`t);
 

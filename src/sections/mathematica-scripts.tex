@@ -101,14 +101,60 @@ To reproduce results, proceed as follows:
     \item Quantum power time scale $\mathbb{T} = \mathbb{R}^q \times \mathbb{R}^q$:
     \begin{itemize}
         \item Example~\ref{time_scale_nq_example_1}:
-        \item Example~\ref{time_scale_nq_example_2}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x $\wedge$ Global`q} in Mathematica package and execute definition
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, x, b]]]}
+            which produces $-3 b + 3 b^2$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, x, b]]]}
+            which produces $3 b - 2 b^2 + 3 b^q - 2 b^{2 q} - 2 b^{1 + q} - 3 x + 3 b x + 3 b^q x$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, t, sigma[t]]]]}
+            which produces $-3 t^q + 3 t^{2 q}$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, t, t]]]}
+            which produces $t^2 + 3 t^q - 2 t^{2 q} + t^{1 + q}$.
+            \item Execute \texttt{Expand[Simplify[mainTheorem[1]]]} which produces $t^2 + t^{2 q} + t^{1 + q}$.
+        \end{itemize}
+        \item Example~\ref{time_scale_nq_example_2}: Similarly to Example~\ref{time_scale_nq_example_1} with $m=2$.
         \item Corollary~\ref{time_scale_nq_corollary_1}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := x $\wedge$ Global`q} in Mathematica package and execute definition
+            \item Execute \texttt{Limit[Expand[Simplify[timeScaleDerivativeB[m, t, t]]], q -> 0]} for various
+            values of \texttt{m}.
+        \end{itemize}
     \end{itemize}
     \item Pure quantum power time scale $\mathbb{T} = q^{\mathbb{R}^n} \times q^{\mathbb{R}^n}$:
     \begin{itemize}
         \item Example~\ref{time_scale_pure_quantum_power_example_1}:
-        \item Example~\ref{time_scale_pure_quantum_power_example_2}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := Global`q * x $\wedge$ Global`j} in Mathematica package and execute definition
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, x, b]]]}
+            which produces $-3 b + 3 b^2$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, x, b]]]}
+            which produces $3 b - 2 b^2 + 3 b^j q - 2 b^{1 + j} q - 2 b^{2 j} q^2 - 3 x + 3 b x +
+            3 b^j q x$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeX[1, t, sigma[t]]]]}
+            which produces $-3 q t^j + 3 q^2 t^{2 j}$.
+            \item Execute \texttt{Expand[Simplify[timeScaleDerivativeB[1, t, t]]]}
+            which produces $t^2 + 3 q t^j - 2 q^2 t^{2 j} + q t^{1 + j}$.
+            \item Execute \texttt{Expand[Simplify[mainTheorem[1]]]} which produces $t^2 + q^2 t^{2 j} + q t^{1 + j}$.
+        \end{itemize}
+        \item Example~\ref{time_scale_pure_quantum_power_example_2}: Similarly
+        as Example~\ref{time_scale_pure_quantum_power_example_1} for $m=2$.
         \item Corollary~\ref{time_scale_pure_quantum_power_corollary_1}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := Global`q * x $\wedge$ Global`j} in Mathematica package and execute definition.
+            \item Execute \texttt{Limit[Limit[Expand[Simplify[timeScaleDerivativeB[m, t, t]]], q -> 1],
+                j -> 0]} for various values of \texttt{m}.
+        \end{itemize}
         \item Corollary~\ref{time_scale_pure_quantum_power_corollary_2}:
+        Execute the commands of Mathematica package
+        \begin{itemize}
+            \item Set \texttt{sigma[x\_] := Global`q * x $\wedge$ Global`j} in Mathematica package and execute definition.
+            \item Execute \texttt{Limit[Limit[Expand[Simplify[timeScaleDerivativeB[5, t, t]]], q -> 0],
+                j -> 0]} for various values of \texttt{m}.
+        \end{itemize}
     \end{itemize}
 \end{itemize}
