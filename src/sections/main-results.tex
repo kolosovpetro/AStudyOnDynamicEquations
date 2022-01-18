@@ -1,22 +1,54 @@
-Time scale derivative of polynomial $t^{2m+1}$ may be expressed as follows
+Time scale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
 \begin{thm}
     \label{main_theorem}
     Let $\polynomialP{m}{b}{x}$ be a $2m+1-$degree integer-valued polynomial defined by~\eqref{eq:polynomial_p}.
     Let be a two-dimensional time scale
-    $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 \colonequals \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$.
+    $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 = \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$.
     Let be $\mathbb{T}_1 = \mathbb{T}_2$.
-    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}$
+    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}, \; m = const$
     \[
         (t^{2m+1})^{\Delta} =
-        \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t)) +
-        \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
+        \frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}+
+        \frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t},
     \]
-    where $\sigma(t) > t$ is forward jump operator.
-\end{thm}
+    where
+    \begin{itemize}
+        \setlength\itemsep{1em}
+        \item  $\sigma(t) > t$ is forward jump operator,
 
-In extended form theorem 3.1 may be written as
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}$
+        is the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$ with respect to the variable $x$, evaluated at $x = t, \; b = \sigma(t)$,
+
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t}$
+        is the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$ with respect to the variable $b$, evaluated at $x = t, \; b = t$.
+    \end{itemize}
+\end{thm}
+In other words, theorem ~\ref{main_theorem} says
+\begin{center}
+    \begin{quotation}
+        For every odd-exponent polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
+        of the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$
+        with respect to the variable
+        $x$,
+        evaluated at
+        $x = t, \; b = \sigma(t)$
+        and the value of the partial derivative on time scales of
+        $\polynomialP{m}{b}{x}$
+        with respect to the variable
+        $b$,
+        evaluated at
+        $x = t, \; b = t$.
+    \end{quotation}
+\end{center}
+
+In extended form theorem ~\ref{main_theorem} may be written as
 
 \begin{align*}
-    (t^{2m+1})^{\Delta} = \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (t, \sigma(t))
-    + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (t, t)
+(t^{2m+1})
+    ^{\Delta}_{t} =
+    \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) \Bigg |_{x = t, \; b = \sigma(t)}
+    + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) \Bigg |_{x = t, \; b = t}
 \end{align*}

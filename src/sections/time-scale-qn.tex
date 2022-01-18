@@ -6,41 +6,45 @@
     For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
     \[
         \qderivative{t^{2m+1}}
-        = \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t))
-        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
+        = \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t},
     \]
     where $\sigma(t) = qt, \; q > 1$.
 \end{cor}
 \begin{examp}
+    \label{time_scale_qn_example_1}
     Let be $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
     and let $m=1$, then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b q - 2 b^2 q - 2 b^2 q^2 - 3 x + 3 b x + 3 b q x \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) = -3 q t + 3 q^2 t^2 \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t) = 3 q t + t^2 + q t^2 - 2 q^2 t^2
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = -3 q t + 3 q^2 t^2 \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 3 q t + t^2 + q t^2 - 2 q^2 t^2
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get $q-$derivative of odd polynomial
     $t^{2m+1}, \; t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
     \[
         \qderivative{t^{3}}
-        = \pTsDerivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) + \pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t)
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
         = t^2 + q t^2 + q^2 t^2.
     \]
 \end{examp}
-For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
+For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$
 the following polynomial identity holds as $q$ tends to zero
 \[
-    \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t) = t^2
+    \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t} = t^2
 \]
 However, it would be generalized as follows
 \begin{cor}
+    \label{time_scale_qn_corollary_1}
     For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
     \[
-        \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t) = t^{2m}.
+        \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t} = t^{2m}.
     \]
 \end{cor}
 \begin{examp}
+    \label{time_scale_qn_example_2}
     Let be $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$ and let $m=2$, then
     \begin{align*}
         \pTsDerivative{\polynomialP{2}{b}{x}}{x}
@@ -53,16 +57,17 @@ However, it would be generalized as follows
         &- 15 b^3 q^2 x - 15 b^3 q^3 x + 5 x^2 - 15 b x^2 + 10 b^2 x^2 - 15 b q x^2 + 10 b^2 q x^2 + 10 b^2 q^2 x^2
     \end{align*}
     \begin{align*}
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t))
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
         = 5 q t^2 - 10 q^2 t^2 - 15 q^2 t^3 + 15 q^3 t^3 + 10 q^3 t^4 - 5 q^4 t^4 \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b}(t, t)
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
         = -5 q t^2 + 10 q^2 t^2 + 15 q^2 t^3 - 15 q^3 t^3 + t^4 + q t^4 + q^2 t^4 - 9 q^3 t^4 + 6 q^4 t^4
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get the $q-$derivative of odd polynomial
     $t^{2m+1}, \; t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
     \[
         \qderivative{t^{5}}
-        = \pTsDerivative{\polynomialP{2}{b}{x}}{x}(t, \sigma(t)) + \pTsDerivative{\polynomialP{2}{b}{x}}{b}(t, t)
+        = \pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        + \pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
         = t^4 + q t^4 + q^2 t^4 + q^3 t^4 + q^4 t^4.
     \]
 \end{examp}
