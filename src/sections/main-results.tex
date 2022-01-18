@@ -7,9 +7,9 @@ Time scale derivative of polynomial $t^{2m+1}$ may be expressed as follows
     Let be $\mathbb{T}_1 = \mathbb{T}_2$.
     For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}$
     \[
-        (t^{2m+1})^{\Delta} =
-        \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t)) +
-        \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
+        (t^{2m+1})^{\Delta}_{t} =
+        \frac{\partial \mathbf{P}_b^m(x)}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}+
+        \frac{\partial \mathbf{P}_b^m(x)}{\Delta b}\bigg |_{x = t, \; b = t}, \quad m = 0,1,2,\dots,
     \]
     where $\sigma(t) > t$ is forward jump operator.
 \end{thm}
