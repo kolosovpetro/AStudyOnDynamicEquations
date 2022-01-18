@@ -9,9 +9,10 @@
         = \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
         + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t) \bigg |_{x = t, \; b = t},
     \]
-    where the forward jump oprerator $\sigma(t)$ is defined as $\sigma(t) = t+1$.
+    where the forward jump operator $\sigma(t)$ is defined as $\sigma(t) = t+1$.
 \end{cor}
 \begin{examp}
+    \label{time_scale_z_example_1}
     Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$ and let $m=1$, then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = 3 b + 3 b^2 \\
@@ -29,6 +30,7 @@
     \]
 \end{examp}
 \begin{examp}
+    \label{time_scale_z_example_2}
     Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
     and let $m=2$, then
     \begin{align*}
@@ -47,6 +49,7 @@
     \]
 \end{examp}
 \begin{cor}
+    \label{time_scale_z_corollary_1}
     For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
     \[
         \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
@@ -54,6 +57,7 @@
     \]
 \end{cor}
 \begin{cor}
+    \label{time_scale_z_corollary_2}
     For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
     \[
         \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 1

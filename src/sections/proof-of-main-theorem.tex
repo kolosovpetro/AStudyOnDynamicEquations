@@ -66,7 +66,8 @@ timescale derivative of $x^{2m+1}, \; x\in \Lambda^2 = \mathbb{T}_1 \times \math
 as
 \begin{equation*}
 (x^{2m+1})
-    ^{\Delta}(t)= \pTsDerivative{\polynomialP{m}{b}{x}}{x} (t, \sigma(t)) + \pTsDerivative{\polynomialP{m}{b}{x}}{b} (t, t)
+    ^{\Delta}(t)= \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+    + \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t}
 \end{equation*}
 
 This completes the proof. \qed
