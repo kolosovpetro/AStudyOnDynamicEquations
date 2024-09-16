@@ -28,7 +28,7 @@ Timescale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
 In simpler words, the theorem ~\ref{main_theorem} says
 \begin{center}
     \begin{quotation}
-        For every odd-exponent polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
+        For every odd-powered polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
         of the value of the partial derivative on time scales of
         $\polynomialP{m}{b}{x}$
         with respect to the variable
@@ -44,11 +44,11 @@ In simpler words, the theorem ~\ref{main_theorem} says
     \end{quotation}
 \end{center}
 
-In extended form theorem ~\ref{main_theorem} may be written as
+In its extended form the theorem ~\ref{main_theorem} is as follows
 
 \begin{align*}
 (t^{2m+1})
     ^{\Delta}_{t} =
-    \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) \Bigg |_{x = t, \; b = \sigma(t)}
-    + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) \Bigg |_{x = t, \; b = t}
+    \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (m, \sigma(t), t)
+    + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (m, t, t)
 \end{align*}
