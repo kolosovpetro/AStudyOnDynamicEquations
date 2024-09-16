@@ -1,22 +1,22 @@
 \begin{thebibliography}{10}
 
 \bibitem{Bohner2001DynamicEO}
-Martin Bohner and Allan Peterson.
+{Bohner, Martin and Peterson, Allan}.
 \newblock {\em {Dynamic equations on time scales: An introduction with
   applications}}.
-\newblock Springer Science \& Business Media, 2001.
+\newblock {Springer Science \& Business Media}, 2001.
 \newblock \url {https://web.mst.edu/~bohner/sample.pdf}.
 
 \bibitem{bohner2004partial}
-Martin Bohner and Gusein~Sh Guseinov.
-\newblock Partial differentiation on time scales.
-\newblock {\em Dynamic systems and applications}, 13(3-4):351--379, 2004.
+{Bohner, Martin and Guseinov, Gusein Sh.}
+\newblock {Partial differentiation on time scales}.
+\newblock {\em {Dynamic systems and applications}}, 13(3-4):351--379, 2004.
 \newblock \url {http://web.mst.edu/~bohner/papers/pdots.pdf}.
 
 \bibitem{ahlbrandt2002partial}
-Calvin~D Ahlbrandt and Christina Morian.
+Calvin~D. Ahlbrandt and Christina Morian.
 \newblock Partial differential equations on time scales.
-\newblock {\em Journal of Computational and Applied Mathematics},
+\newblock {\em {Journal of Computational and Applied Mathematics}},
   141(1-2):35--55, 2002.
 \newblock \url {https://doi.org/10.1016/S0377-0427(01)00434-4}.
 
@@ -28,71 +28,66 @@ B.~Jackson.
 \newblock \url {https://doi.org/10.1016/j.cam.2005.02.011}.
 
 \bibitem{jackson_1909}
-Frederick~H Jackson.
-\newblock Xi.—on q-functions and a certain difference operator.
-\newblock {\em Earth and Environmental Science Transactions of the Royal
-  Society of Edinburgh}, 46(2):253--281, 1909.
+{Jackson, Frederick H.}
+\newblock {XI.—on q-functions and a certain difference operator}.
+\newblock {\em {Earth and Environmental Science Transactions of the Royal
+  Society of Edinburgh}}, 46(2):253--281, 1909.
 
 \bibitem{ernst2000history}
 Thomas Ernst.
 \newblock {\em The history of q-calculus and a new method}.
-\newblock Citeseer, 2000.
+\newblock {Citeseer}, 2000.
 
 \bibitem{ernst2008different}
 Thomas Ernst.
-\newblock The different tongues of q-calculus.
-\newblock {\em Proceedings of the Estonian Academy of Sciences}, 57(2), 2008.
+\newblock {The different tongues of q-calculus}.
+\newblock {\em {Proceedings of the Estonian Academy of Sciences}}, 57(2), 2008.
 
 \bibitem{kac2001quantum}
 Victor Kac and Pokman Cheung.
 \newblock {\em Quantum calculus}.
-\newblock Springer Science \& Business Media, 2001.
+\newblock {Springer Science \& Business Media}, 2001.
 
 \bibitem{aldwoah2011power}
-Khaled~A Aldwoah, Agnieszka~B Malinowska, and Delfim~FM Torres.
+{Aldwoah, Khaled A. and Malinowska, Agnieszka B. and Torres, Delfim F.M.}
 \newblock The power quantum calculus and variational problems.
-\newblock {\em arXiv preprint arXiv:1107.0344}, 2011.
+\newblock {\em {arXiv preprint arXiv:1107.0344}}, 2011.
 \newblock \url {https://arxiv.org/abs/1107.0344}.
 
 \bibitem{kolosov2016link}
-Petro Kolosov.
+{Kolosov, Petro}.
 \newblock {On the link between Binomial Theorem and Discrete Convolution of
   Polynomials}.
-\newblock {\em arXiv preprint arXiv:1603.02468}, 2016.
+\newblock {\em {arXiv preprint arXiv:1603.02468}}, 2016.
 \newblock \url {https://arxiv.org/abs/1603.02468}.
 
-\bibitem{WeissteinBernoulli}
-Eric~W Weisstein.
-\newblock {"Bernoulli Number." From MathWorld -- A Wolfram Web Resource.}
-\newblock \url {http://mathworld.wolfram.com/BernoulliNumber.html}.
-
 \bibitem{hilger1988ein}
-S~Hilger.
+S.~Hilger.
 \newblock {\em {E {\i} n Ma {\ss} kettenkalk {\"u} l m {\i} t Anwendung auf
   Zentrumsmann {\i} gfalt {\i} gke {\i} ten}}.
-\newblock PhD thesis, Ph. D. Thesis, Universt {\"a} t W {\"u} rzburg, 1988.
+\newblock PhD thesis, {Ph. D. Thesis, Universt {\"a} t W {\"u} rzburg}, 1988.
 
 \bibitem{bayour2017truly}
-Benaoumeur Bayour, Ahmed Hammoudi, and Delfim~FM Torres.
-\newblock A truly conformable calculus on time scales.
-\newblock {\em arXiv preprint arXiv:1705.08928}, 2017.
+{Bayour, Benaoumeur and Hammoudi, Ahmed and Torres, Delfim F.M.}
+\newblock {A truly conformable calculus on time scales}.
+\newblock {\em {arXiv preprint arXiv:1705.08928}}, 2017.
 \newblock \url {https://arxiv.org/abs/1705.08928}.
 
 \bibitem{benkhettou2016conformable}
-Nadia Benkhettou, Salima Hassani, and Delfim~FM Torres.
+{Benkhettou, Nadia and Hassani, Salima and Torres, Delfim F.M.}
 \newblock A conformable fractional calculus on arbitrary time scales.
-\newblock {\em Journal of King Saud University-Science}, 28(1):93--98, 2016.
+\newblock {\em {Journal of King Saud University-Science}}, 28(1):93--98, 2016.
 
 \bibitem{caputo2009time}
-M~Cristina Caputo.
-\newblock Time scales: from nabla calculus to delta calculus and vice versa via
-  duality.
-\newblock {\em arXiv preprint arXiv:0910.0085}, 2009.
+{Caputo, M. Cristina}.
+\newblock {Time scales: from nabla calculus to delta calculus and vice versa
+  via duality}.
+\newblock {\em {arXiv preprint arXiv:0910.0085}}, 2009.
 
 \bibitem{martins2009calculus}
-Nat {\'a}~lia Martins and Delfim~FM Torres.
-\newblock Calculus of variations on time scales with nabla derivatives.
-\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications},
+{Martins, Natalia and Torres, Delfim F.M.}
+\newblock {Calculus of variations on time scales with nabla derivatives}.
+\newblock {\em {Nonlinear Analysis: Theory, Methods \& Applications}},
   71(12):e763--e773, 2009.
 
 \bibitem{kolosov2022mathematica}
