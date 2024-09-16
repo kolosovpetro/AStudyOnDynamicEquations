@@ -1,4 +1,4 @@
-Timescale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
+Timescale derivative of odd-powered polynomial $t^{2m+1}$ may be expressed as follows
 \begin{thm}
     \label{main_theorem}
     Let $P(m,b,x)$ be a $2m+1$-degree polynomial in $x,b$.
@@ -7,7 +7,7 @@ Timescale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
     such that $\mathbb{T}_1 = \mathbb{T}_2$.
     For every $t\in\mathbb{T}_1$ and $x,b\in \Lambda^2$
     \[
-        \frac{\Delta t^{2m+1}}{\Delta t} =
+        \frac{\Delta x^{2m+1}}{\Delta x}(t) =
         \frac{\partial P(m,b,x)}{\Delta x} (m, \sigma(t), t) +
         \frac{\partial P(m,b,x)}{\Delta b} (m, t, t)
     \]
@@ -28,27 +28,24 @@ Timescale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
 In simpler words, the theorem ~\ref{main_theorem} says
 \begin{center}
     \begin{quotation}
-        For every odd-powered polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
-        of the value of the partial derivative on time scales of
+        For every odd-powered polynomial $x^{2m+1}$, the derivative on time scales $\frac{\Delta x^{2m+1}}{\Delta x}$
+        evaluated in point $t\in\mathbb{T}_1$ equals to partial derivative on time scales of the polynomial
         $\polynomialP{m}{b}{x}$
-        with respect to the variable
-        $x$,
-        evaluated at
-        $x = t, \; b = \sigma(t)$
-        and the value of the partial derivative on time scales of
+        with respect to $x$
+        evaluated in point
+        $(x,b) = (t, \sigma(t))$
+        plus the value of the partial derivative on time scales of the polynomial
         $\polynomialP{m}{b}{x}$
-        with respect to the variable
-        $b$,
-        evaluated at
-        $x = t, \; b = t$.
+        with respect to $b$,
+        evaluated in point
+        $(x,b)=(t,t)$.
     \end{quotation}
 \end{center}
 
 In its extended form the theorem ~\ref{main_theorem} is as follows
 
 \begin{align*}
-(t^{2m+1})
-    ^{\Delta}_{t} =
+    \frac{\Delta x^{2m+1}}{\Delta x}(t) =
     \frac{\partial}{\Delta x} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (m, \sigma(t), t)
     + \frac{\partial}{\Delta b} \left( \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r \right) (m, t, t)
 \end{align*}
