@@ -1,31 +1,31 @@
-Time scale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
+Timescale derivative of the polynomial $t^{2m+1}$ may be expressed as follows
 \begin{thm}
     \label{main_theorem}
-    Let $\polynomialP{m}{b}{x}$ be a $2m+1-$degree integer-valued polynomial defined by~\eqref{eq:polynomial_p}.
-    Let be a two-dimensional time scale
-    $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 = \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$.
-    Let be $\mathbb{T}_1 = \mathbb{T}_2$.
-    For every $t\in\mathbb{T}_1, \; x,b\in \Lambda^2, \; m\in\mathbb{N}, \; m = const$
+    Let $P(m,b,x)$ be a $2m+1$-degree polynomial in $x,b$.
+    Let be a two-dimensional timescale
+    $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 = \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$
+    such that $\mathbb{T}_1 = \mathbb{T}_2$.
+    For every $t\in\mathbb{T}_1$ and $x,b\in \Lambda^2$
     \[
-        (t^{2m+1})^{\Delta} =
-        \frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}+
-        \frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t},
+        \frac{\Delta t^{2m+1}}{\Delta t} =
+        \frac{\partial P(m,b,x)}{\Delta x} (m, \sigma(t), t) +
+        \frac{\partial P(m,b,x)}{\Delta b} (m, t, t)
     \]
     where
     \begin{itemize}
         \setlength\itemsep{1em}
-        \item  $\sigma(t) > t$ is forward jump operator,
+        \item  $\sigma(t) > t$ -- is forward jump operator
 
-        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)}$
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta x} (m, \sigma(t), t)$ --
         is the value of the partial derivative on time scales of
-        $\polynomialP{m}{b}{x}$ with respect to the variable $x$, evaluated at $x = t, \; b = \sigma(t)$,
+        $\polynomialP{m}{b}{x}$ with respect to the variable $x$ evaluated in point $x = t, \; b = \sigma(t)$
 
-        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta b} \bigg |_{x = t, \; b = t}$
+        \item $\frac{\partial \polynomialP{m}{b}{x}}{\Delta b} (m, t, t)$ --
         is the value of the partial derivative on time scales of
-        $\polynomialP{m}{b}{x}$ with respect to the variable $b$, evaluated at $x = t, \; b = t$.
+        $\polynomialP{m}{b}{x}$ with respect to the variable $b$, evaluated at $x = t, \; b = t$
     \end{itemize}
 \end{thm}
-In other words, theorem ~\ref{main_theorem} says
+In simpler words, the theorem ~\ref{main_theorem} says
 \begin{center}
     \begin{quotation}
         For every odd-exponent polynomial $t^{2m+1}$, its derivative on time scales equals to the sum
