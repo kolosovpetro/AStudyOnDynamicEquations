@@ -1,73 +1,61 @@
-We now set the following notation, which remains fixed for the remainder of this paper:
+We now set the following notation such that remains fixed for the remainder of this manuscript
 \begin{itemize}
-    \setlength\itemsep{1em}
+    \setlength\itemsep{1.6em}
     \item Let be a function $f\colon \mathbb{T} \to \mathbb{R}$ and $t\in\mathbb{T}^{\kappa}$ then $f^{\Delta}(t)$
-    is delta time-scale derivative~\cite{Bohner2001DynamicEO} of $f$
-    \[
-        f^{\Delta} (t) = \frac{f(\sigma(t)) - f(t)}{\mu(t)} = \frac{f(\sigma(t)) - f(t)}{\sigma(t) - t},
-    \]
-    where $\mu(t) = \sigma(t) - t, \; \mu(t) \neq 0$ and $\sigma(t) > t$ is forward jump operator.
+    is delta timescale derivative~\cite{Bohner2001DynamicEO}
+    \begin{align*}
+        f^{\Delta} (t) = \frac{f(\sigma(t)) - f(t)}{\sigma(t) - t}
+    \end{align*}
+    where $\sigma(t) - t \neq 0$ and $\sigma(t) > t$ is forward jump operator.
 
-    \item $\dfrac{\partial f(t_1,\ldots,t_n)}{\Delta_i t_i}, \; f^{\Delta_i}_{t_i}(t)$ is delta partial derivative
-    of $f\colon \Lambda^n \to \mathbb{R}$ on $n-$dimensional time scale
-    $\Lambda^n$~\cite{bohner2004partial, ahlbrandt2002partial,JACKSON2006391},
-    defined as a limit
-    \[
-        f^{\Delta_i}_{t_i}(t) = \lim \limits_{\substack{s_i \to t_i \\ s_i \neq \sigma_i(t_i)}}
+    \item $\dfrac{\partial f(t_1,\ldots,t_n)}{\Delta_i t_i}$ is the delta partial derivative
+    of $f\colon \Lambda^n \to \mathbb{R}$ on $n$-dimensional timescale
+    $\Lambda^n$ defined via the limit~\cite{bohner2004partial, ahlbrandt2002partial,JACKSON2006391}
+    \begin{align*}
+        f^{\Delta_i}_{t_i}(t) = \lim \limits_{\substack{s_i \to t_i}}
         \frac{
             f(t_1, \ldots, t_{i-1}, \sigma_i(t_i), t_{t+1}, \ldots, t_n)
             - f(t_1, \ldots, t_{i-1}, s_i, t_{t+1}, \ldots, t_n)
-        }{\sigma_i(t_i) - s_i},
-    \]
+        }{\sigma_i(t_i) - s_i}
+    \end{align*}
     where $\sigma_i(t_i) > t_i$ and $\sigma_i(t_i) - s_i \neq 0$.
 
     \item $\qderivative{f(x)}$ is $q-$derivative~\cite{jackson_1909,ernst2000history,ernst2008different,kac2001quantum}
-    \[
-        \qderivative{f(x)} = \frac{f(qx)-f(x)}{qx-x},
-    \]
+    \begin{align*}
+        \qderivative{f(x)} = \frac{f(qx)-f(x)}{qx-x}
+    \end{align*}
     where $x\neq 0, \; x\in\mathbb{R}, \; q\in\mathbb{R}$.
 
     \item $\nqderivative{f(t)}$ is $q-$power derivative~\cite{aldwoah2011power}
-    \[
-        \nqderivative{f(t)} = \frac{f(qt^n) - f(t)}{qt^n - t},
-    \]
+    \begin{align*}
+        \nqderivative{f(t)} = \frac{f(qt^n) - f(t)}{qt^n - t}
+    \end{align*}
     where $qt^n - t \neq 0$ and $n$ is odd positive integer and $0 < q < 1$.
 
     \item $\qpowerDerivative{f(x)}$ is $q-$power derivative
-    \[
-        \qpowerDerivative{f(x)} = \frac{f(x^q)-f(x)}{x^q-x},
-    \]
+    \begin{align*}
+        \qpowerDerivative{f(x)} = \frac{f(x^q)-f(x)}{x^q-x}
+    \end{align*}
     where $x^q \neq x, \; x\in\mathbb{R}, \; q\in\mathbb{R}$.
 
-    \item $\polynomialP{m}{b}{x}, \; x,b\in\mathbb{R}, \; m\in\mathbb{N}$ is $2m+1-$degree integer-valued polynomial~\cite{kolosov2016link}
+    \item $\polynomialP{m}{b}{x}, \; x,b\in\mathbb{R}, \; m\in\mathbb{N}$ is $2m+1$-degree
+    polynomial in $x,b$
     \begin{equation}
-        \polynomialP{m}{b}{x} = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r,
+        \polynomialP{m}{b}{x} = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r
         \label{eq:polynomial_p}
     \end{equation}
-    where $\coeffA{m}{r}, \; m\in\mathbb{N}$ is a real coefficient defined recursively
-    \[
-        \coeffA{m}{r} =
-        \begin{cases}
-        (2r+1)
-            \binom{2r}{r}, & \text{if } r=m,\\
-            (2r+1) \binom{2r}{r} \sum_{d=2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r}
-            \bernoulli{2d-2r}, & \text{if } 0 \leq r<m,\\
-            0, & \text{if } r<0 \text{ or } r>m,
-        \end{cases}
-    \]
-    where $\bernoulli{t}$ are Bernoulli numbers~\cite{WeissteinBernoulli}.
-    It is assumed that $\bernoulli{1}=\frac{1}{2}$.
+    where $\coeffA{m}{r}$ is a real coefficient defined recursively, see~\cite{kolosov2016link}.
 
-    \item $\mathbb{Z}$ is an integer time scale such that $\sigma(t) = t+1$ and $\mu(t) = 1$.
+    \item $\mathbb{Z}$ is an integer timescale such that $\sigma(t) = t+1$ and $\mu(t) = 1$.
 
-    \item $\mathbb{R}$ is a real time scale such that $\sigma(t) = t+\Delta t$ and $\mu(t) = \Delta t, \; \Delta t \to 0$.
+    \item $\mathbb{R}$ is a real timescale such that $\sigma(t) = t+\Delta t$ and $\mu(t) = \Delta t, \; \Delta t \to 0$.
 
-    \item $q^\mathbb{R}$ is a quantum time scale such that $\sigma(t) = qt$ and $\mu(t) = qt - t$,
+    \item $q^\mathbb{R}$ is a quantum timescale such that $\sigma(t) = qt$ and $\mu(t) = qt - t$,
     [page 18~\cite{Bohner2001DynamicEO}].
 
-    \item $\mathbb{R}^q$ is a quantum power time scale such that $\sigma(t) = t^q$ and $\mu(t) = t^q - t$.
+    \item $\mathbb{R}^q$ is a quantum power timescale such that $\sigma(t) = t^q$ and $\mu(t) = t^q - t$.
 
-    \item $q^{\mathbb{R}^n}$ is a pure quantum power time scale
+    \item $q^{\mathbb{R}^n}$ is a pure quantum power timescale
     such that $\sigma(t) = qt^n > t, \; 0<q<1, \; \mu(t) = qt^n - t$ and $n$ is positive
     odd integer~\cite{aldwoah2011power}.
 \end{itemize}

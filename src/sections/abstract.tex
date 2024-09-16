@@ -2,12 +2,14 @@ Let $P(m,b,x)$ be a $2m+1$-degree polynomial in $x,b$.
 Let be a two-dimensional timescale
 $\Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2 = \{t=(x, b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2 \}$
 such that $\mathbb{T}_1 = \mathbb{T}_2$.
-In this manuscript we derive and discuss the following partial dynamic equation on time scales.
+In this manuscript we derive and discuss an identity that connects the timescale derivative of odd-power polynomial
+with partial derivatives of polynomial $P(m,b,x)$ evaluated in particular points.
 For every $t\in\mathbb{T}_1$ and $x,b\in \Lambda^2$
 \[
-    (t^{2m+1})^{\Delta} =
-    \frac{\partial P(m,b,x)}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)} +
-    \frac{\partial P(m,b,x)}{\Delta b}\bigg |_{x = t, \; b = t}
+    \frac{\Delta t^{2m+1}}{\Delta t} =
+%    \frac{\partial P(m,b,x)}{\Delta x} \bigg |_{x = t, \; b = \sigma(t)} +
+    \frac{\partial P(m,b,x)}{\Delta x} (m, \sigma(t), t) +
+    \frac{\partial P(m,b,x)}{\Delta b} (m, t, t)
 \]
 such that $\sigma(t) > t$ is forward jump operator.
 In addition, we discuss various derivative operators in context of partial cases of above equation,
