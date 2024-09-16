@@ -8,3 +8,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ## [1.0.0] - In progress
 
 ### Changed
+- Change bibliography style
+- Update CI/CD
+- Update version inside document
+- Update README.md
