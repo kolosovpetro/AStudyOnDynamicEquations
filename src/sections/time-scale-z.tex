@@ -4,11 +4,11 @@
     Let be a two-dimensional timescale
     $\Lambda^2 = \mathbb{Z} \times \mathbb{Z}$.
     For every $t\in\mathbb{Z}$ and $x,b\in \Lambda^2$
-    \[
-        \finiteDifference{t^{2m+1}}
+    \begin{align*}
+        \finiteDifference{x^{2m+1}} (t)
         = \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
         + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(m, \sigma(t), t)
-    \]
+    \end{align*}
     where $\sigma(t)$ is the forward jump operator defined as $\sigma(t) = t+1$.
 \end{cor}
 \begin{examp}
@@ -16,8 +16,15 @@
     Let be $t \in \mathbb{Z}, \; x,b \in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$ and let $m=1$, then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x}                = -3 b + 3 b^2 \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}                = 1 - 6 b^2 + 6 b x
+%        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (t, \sigma(t)) = 3 t + 3 t^2 \\
+%        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(t,t)           = 1
+    \end{align*}
+    Evaluating in points yields
+    \begin{align*}
+%        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}                = -3 b + 3 b^2 \\
+%        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}                = 1 - 6 b^2 + 6 b x \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (t, \sigma(t)) = 3 t + 3 t^2 \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}                = 1 - 6 b^2 + 6 b x \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(t,t)           = 1
     \end{align*}
     Summing up previously obtained partial timescale derivatives, we get ordinary finite difference of odd-powered polynomial
@@ -35,12 +42,17 @@
     and let $m=2$, then
     \begin{align*}
         &\pTsDerivative{\polynomialP{2}{b}{x}}{x}                = 5 b - 30 b^2 + 40 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b}                = 1 + 30 b^4 - 60 b^3 x + 30 b^2 x^2 \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b}                = 1 + 30 b^4 - 60 b^3 x + 30 b^2 x^2
+%        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (t, \sigma(t)) = 5 t + 10 t^2 + 10 t^3 + 5 t^4 \\
+%        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (t, t)         = 1
+    \end{align*}
+    Evaluating in points yields
+    \begin{align*}
         &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (t, \sigma(t)) = 5 t + 10 t^2 + 10 t^3 + 5 t^4 \\
         &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (t, t)         = 1
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get time ordinary finite difference of odd polynomial
-    $t^{2m+1}, \; t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
+    Summing up previously obtained partial time-scale derivatives, we get time ordinary finite difference of odd-powered
+    polynomial $x^{2m+1}$ and $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
     \begin{align*}
         \finiteDifference{x^{5}} (t)
         = \pTsDerivative{\polynomialP{2}{b}{x}}{x} (t, \sigma(t))
