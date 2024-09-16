@@ -21,7 +21,7 @@
 \newcommand \bernoulli [2][B] {{#1}\sb{#2}}
 \newcommand \curvePower [2]{\{#1\}\sp{#2}}
 \newcommand \coeffA [3][A] {{\mathbf{#1}} \sb{#2,#3}}
-\newcommand \polynomialP [4][P]{{\mathbf{#1}}\sp{#2} \sb{#3}(#4)}
+\newcommand \polynomialP [4][P] {#1 ( #2, #3, #4 )}
 
 % ordinary derivatives
 \newcommand \derivative [2] {\frac{d}{d #2} #1}                              % 1 - function; 2 - variable;
@@ -138,6 +138,7 @@
     \bibliographystyle{unsrt}
     \bibliography{AStudyOnDynamicEquations}
     \noindent \textbf{Version:} \input{sections/version}
+
 
     \section{Addendum 1: Mathematica scripts} \label{sec:mathematica_scripts}
     \input{sections/mathematica-scripts}
