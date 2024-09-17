@@ -4,11 +4,11 @@
     Let be a two-dimensional time scale
     $\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q} \colonequals \{t=(x,b) \colon \; b\in {\mathbb{R}}^{q}, \; x\in{\mathbb{R}}^{q} \}$.
     For every $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
-    \[
+    \begin{align*}
         \qpowerDerivative{t^{2m+1}}
-        = \pTsDerivative{\polynomialP{m}{b}{x}}{x}(t, \sigma(t))
-        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t),
-    \]
+        = \pTsDerivative{\polynomialP{m}{b}{x}}{x}(m, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(m, t, t)
+    \end{align*}
     where the forward jump operator is defined as $\sigma(t) = t^q, \; q > 1$.
 \end{cor}
 \begin{examp}
@@ -17,18 +17,21 @@
     and let $m=1$, then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b^q - 2 b^{2 q} - 2 b^{1 + q} - 3 x + 3 b x + 3 b^q x \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = -3 t^q + 3 t^{2 q} \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t} = t^2 + 3 t^q - 2 t^{2 q} + t^{1 + q}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b^q - 2 b^{2 q} - 2 b^{1 + q} - 3 x + 3 b x + 3 b^q x
+    \end{align*}
+    Evaluating in points yields
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (m, \sigma(t), t) = -3 t^q + 3 t^{2 q} \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} (m, t, t) = t^2 + 3 t^q - 2 t^{2 q} + t^{1 + q}
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd polynomial
-    $t^{2m+1}, \; t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
-    \[
+    $x^{3}$ evaluated in point $t \in {\mathbb{R}}^{q}$
+    \begin{align*}
         \qpowerDerivative{t^{3}}
-        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} (1, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} (1, t, t)
         = t^2 + t^{2 q} + t^{1 + q}.
-    \]
+    \end{align*}
 \end{examp}
 \begin{examp}
     \label{time_scale_nq_example_2}
@@ -44,28 +47,29 @@
         &- 15 b^{3 q} x + 30 b^{1 + q} x - 15 b^{2 + q} x - 15 b^{1 + 2 q} x + 5 x^2 - 15 b x^2 + 10 b^2 x^2 \\
         &- 15 b^q x^2 + 10 b^{2 q} x^2 + 10 b^{1 + q} x^2
     \end{align*}
+    Evaluation in points yields
     \begin{align*}
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (m, \sigma(t), t)
         = -10 t^{2 q} + 15 t^{3q} - 5 t^{4q} + 5 t^{1+q} - 15 t^{1+2q} + 10 t^{1 + 3 q} \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (m, t, t)
         = t^4 + 10 t^{2 q} - 15 t^{3 q} + 6 t^{4 q} - 5 t^{1 + q} + t^{3 + q}
         + 15 t^{1 + 2 q} + t^{2 + 2 q} - 9 t^{1 + 3 q}
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd polynomial
     $t^{2m+1}, \; t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
-    \[
+    \begin{align*}
         \qpowerDerivative{t^{5}}
-        = \pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+        = \pTsDerivative{\polynomialP{2}{b}{x}}{x} (m, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{2}{b}{x}}{b} (m, t, t)
         = t^4 + t^{4 q} + t^{3 + q} + t^{2 + 2 q} + t^{1 + 3 q}.
-    \]
+    \end{align*}
 \end{examp}
 Another polynomial identity, that is exponential sum holds
 \begin{cor}
     \label{time_scale_nq_corollary_1}
     For every $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; t\in\mathbb{R}, \; m\in\mathbb{N}$
-    \[
-        \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+    \begin{align*}
+        \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
         = \sum_{k=0}^{2m} t^k
-    \]
+    \end{align*}
 \end{cor}
