@@ -3,7 +3,7 @@
     (Q-power derivative~\cite{aldwoah2011power}.)
     Let be a two-dimensional time scale
     $\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q} \colonequals \{t=(x,b) \colon \; b\in {\mathbb{R}}^{q}, \; x\in{\mathbb{R}}^{q} \}$.
-    For every $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
+    For every $t\in {\mathbb{R}}^{q}, \; (x,b) \in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}$
     \begin{align*}
         \qpowerDerivative{t^{2m+1}}
         = \pTsDerivative{\polynomialP{m}{b}{x}}{x}(m, \sigma(t), t)
@@ -13,16 +13,15 @@
 \end{cor}
 \begin{examp}
     \label{time_scale_nq_example_1}
-    Let be $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
-    and let $m=1$, then
+    Let be $t\in {\mathbb{R}}^{q}, \; (x,b) \in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}$, let $m=1$ then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b^q - 2 b^{2 q} - 2 b^{1 + q} - 3 x + 3 b x + 3 b^q x
     \end{align*}
     Evaluating in points yields
     \begin{align*}
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (m, \sigma(t), t) = -3 t^q + 3 t^{2 q} \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} (m, t, t) = t^2 + 3 t^q - 2 t^{2 q} + t^{1 + q}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (1, \sigma(t), t) = -3 t^q + 3 t^{2 q} \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} (1, t, t) = t^2 + 3 t^q - 2 t^{2 q} + t^{1 + q}
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd polynomial
     $x^{3}$ evaluated in point $t \in {\mathbb{R}}^{q}$
@@ -35,7 +34,7 @@
 \end{examp}
 \begin{examp}
     \label{time_scale_nq_example_2}
-    Let be $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$ and let $m=2$, then
+    Let be $t\in {\mathbb{R}}^{q}, \; (x,b) \in \Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}$, let $m=2$ then
     \begin{align*}
         \pTsDerivative{\polynomialP{2}{b}{x}}{x}
         &= -15 b^2 + 30 b^3 - 15 b^4 + 5 b x - 15 b^2 x + 10 b^3 x + 5 b x^q - 15 b^2 x^q + 10 b^3 x^q \\
@@ -49,16 +48,16 @@
     \end{align*}
     Evaluation in points yields
     \begin{align*}
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (m, \sigma(t), t)
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (2, \sigma(t), t)
         = -10 t^{2 q} + 15 t^{3q} - 5 t^{4q} + 5 t^{1+q} - 15 t^{1+2q} + 10 t^{1 + 3 q} \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (m, t, t)
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (2, t, t)
         = t^4 + 10 t^{2 q} - 15 t^{3 q} + 6 t^{4 q} - 5 t^{1 + q} + t^{3 + q}
         + 15 t^{1 + 2 q} + t^{2 + 2 q} - 9 t^{1 + 3 q}
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd polynomial
-    $t^{2m+1}, \; t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; m\in\mathbb{N}$
+    Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd-powered polynomial
+    $x^5$ evaluated in point $t\in {\mathbb{R}}^{q}$
     \begin{align*}
-        \qpowerDerivative{t^{5}}
+        \qpowerDerivative{x^{5}}(t)
         = \pTsDerivative{\polynomialP{2}{b}{x}}{x} (m, \sigma(t), t)
         + \pTsDerivative{\polynomialP{2}{b}{x}}{b} (m, t, t)
         = t^4 + t^{4 q} + t^{3 + q} + t^{2 + 2 q} + t^{1 + 3 q}.
@@ -67,7 +66,7 @@
 Another polynomial identity, that is exponential sum holds
 \begin{cor}
     \label{time_scale_nq_corollary_1}
-    For every $t\in {\mathbb{R}}^{q}, \; x,b\in\Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; t\in\mathbb{R}, \; m\in\mathbb{N}$
+    For every $t\in {\mathbb{R}}^{q}, \; (x,b) \in \Lambda^2 = {\mathbb{R}}^{q} \times {\mathbb{R}}^{q}, \; t\in\mathbb{R}$
     \begin{align*}
         \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
         = \sum_{k=0}^{2m} t^k

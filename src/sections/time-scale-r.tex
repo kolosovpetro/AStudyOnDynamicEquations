@@ -1,9 +1,9 @@
 \begin{cor}
     \label{derivative_case}
     (Classical derivative.)
-    Let be a two-dimensional time scale
+    Let be a two-dimensional timescale
     $\Lambda^2 = \mathbb{R} \times \mathbb{R} \colonequals \{t=(x, b) \colon \; x\in \mathbb{R}, \; b\in\mathbb{R} \}$.
-    For every $t\in\mathbb{R}$ and $x,b\in \Lambda^2$
+    For every $t\in\mathbb{R}$ and $(x,b) \in \Lambda^2$
     \begin{align*}
         \odv{x^{2m+1}}{x} (t)
         = \pdv{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
@@ -13,7 +13,7 @@
 \end{cor}
 \begin{examp}
     \label{time_scale_r_example_1}
-    Let be $t\in\mathbb{R}, \; x,b\in \Lambda^2 = \mathbb{R} \times \mathbb{R}, \; m\in\mathbb{N}$ and let $m=1$, then
+    Let be $t\in\mathbb{R}, \; (x,b) \in \Lambda^2 = \mathbb{R} \times \mathbb{R}$, let $m=1$ then
     \begin{align*}
         \pdv{\polynomialP{1}{b}{x}}{x} &= -3 b + 3 b^2 \\
         \pdv{\polynomialP{1}{b}{x}}{b} &= 6 b - 6 b^2 - 3 x + 6 b x
@@ -34,7 +34,7 @@
 \end{examp}
 \begin{examp}
     \label{time_scale_r_example_2}
-    Let be $t\in\mathbb{R}, \; x,b\in \Lambda^2 = \mathbb{R} \times \mathbb{R}, \; m\in\mathbb{N}$ and let $m=2$, then
+    Let be $t\in\mathbb{R}, \; (x,b) \in \Lambda^2 = \mathbb{R} \times \mathbb{R}$, let $m=2$ then
     \begin{align*}
         &\pdv{\polynomialP{2}{b}{x}}{x} = -15 b^2 + 30 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x, \\
         &\pdv{\polynomialP{2}{b}{x}}{b} = 30 b^2 - 60 b^3 + 30 b^4 - 30 b x + 90 b^2 x - 60 b^3 x + 5 x^2 - 30 b x^2 + 30 b^2 x^2
@@ -47,7 +47,7 @@
     Summing up previously obtained partial timescale derivatives, we get classical derivative of an odd polynomial
     $x^5$ evaluated in point $t\in\mathbb{R}$
     \begin{align*}
-        \odv{t^5}{t}
+        \odv{x^5}{x} (t)
         = \pdv{\polynomialP{2}{b}{x}}{x} (2, \sigma(t), t)
         + \pdv{\polynomialP{2}{b}{x}}{b} (2, \sigma(t), t)
         = 5t^4.

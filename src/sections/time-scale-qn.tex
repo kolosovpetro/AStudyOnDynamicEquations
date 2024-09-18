@@ -3,9 +3,9 @@
     (Q-derivative~\cite{jackson_1909}.)
     Let be a two-dimensional time scale
     $\Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}} \colonequals \{t=(x,b) \colon \; x\in q^{\mathbb{R}}, \; b \in q^{\mathbb{R}} \}$.
-    For every $t\in q^{\mathbb{R}}$ and $x,b\in \Lambda^2$
+    For every $t\in q^{\mathbb{R}}$ and $(x,b)\in \Lambda^2$
     \begin{align*}
-        \qderivative{x^{2m+1}}(x)
+        \qderivative{x^{2m+1}}(t)
         = \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
         + \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
     \end{align*}
@@ -13,8 +13,7 @@
 \end{cor}
 \begin{examp}
     \label{time_scale_qn_example_1}
-    Let be $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
-    and let $m=1$, then
+    Let be $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$, let $m=1$ then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b q - 2 b^2 q - 2 b^2 q^2 - 3 x + 3 b x + 3 b q x
@@ -24,16 +23,16 @@
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (m, \sigma(t), t) = -3 q t + 3 q^2 t^2 \\
         &\pTsDerivative{\polynomialP{1}{b}{x}}{b} (m, t, t) = 3 q t + t^2 + q t^2 - 2 q^2 t^2
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get the $q$-derivative of odd polynomial
-    $x^{2m+1}$ evaluated in point $t\in q^{\mathbb{R}}$
+    Summing up previously obtained partial time-scale derivatives, we get the $q$-derivative of odd-powered polynomial
+    $x^{3}$ evaluated in point $t\in q^{\mathbb{R}}$
     \begin{align*}
-        \qderivative{x^{3}}(x)
+        \qderivative{x^{3}}(t)
         = \pTsDerivative{\polynomialP{1}{b}{x}}{x} (m, \sigma(t), t)
         + \pTsDerivative{\polynomialP{1}{b}{x}}{b} (m, t, t)
         = t^2 + q t^2 + q^2 t^2.
     \end{align*}
 \end{examp}
-For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$
+For every $t\in q^{\mathbb{R}}, \; (x,b) \in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$
 the following polynomial identity holds as $q$ tends to zero
 \begin{align*}
     \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{1}{b}{x}}{b} (1, t, t) = t^2
@@ -41,14 +40,14 @@ the following polynomial identity holds as $q$ tends to zero
 However, it would be generalized as follows
 \begin{cor}
     \label{time_scale_qn_corollary_1}
-    For every $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
+    For every $t\in q^{\mathbb{R}}, \; (x,b) \in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$
     \begin{align*}
         \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t) = t^{2m}.
     \end{align*}
 \end{cor}
 \begin{examp}
     \label{time_scale_qn_example_2}
-    Let be $t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$ and let $m=2$, then
+    Let be $t\in q^{\mathbb{R}}, \; (x,b) \in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}$, let $m=2$ then
     \begin{align*}
         \pTsDerivative{\polynomialP{2}{b}{x}}{x}
         &= -15 b^2 + 30 b^3 - 15 b^4 + 5 b x - 15 b^2 x + 10 b^3 x + 5 b q x - 15 b^2 q x + 10 b^3 q x \\
@@ -67,7 +66,7 @@ However, it would be generalized as follows
         = -5 q t^2 + 10 q^2 t^2 + 15 q^2 t^3 - 15 q^3 t^3 + t^4 + q t^4 + q^2 t^4 - 9 q^3 t^4 + 6 q^4 t^4
     \end{align*}
     Summing up previously obtained partial time-scale derivatives, we get the $q-$derivative of odd polynomial
-    $t^{2m+1}, \; t\in q^{\mathbb{R}}, \; x,b\in \Lambda^2 = q^{\mathbb{R}} \times q^{\mathbb{R}}, \; m\in\mathbb{N}$
+    $x^{5}$ evaluated in point $t\in q^{\mathbb{R}}$
     \begin{align*}
         \qderivative{t^{5}}
         = \pTsDerivative{\polynomialP{2}{b}{x}}{x} (2, \sigma(t), t)
