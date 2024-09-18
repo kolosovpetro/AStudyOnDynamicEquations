@@ -1,65 +1,70 @@
 \begin{cor}
     \label{finite_difference_case}
-    (Finite difference.)
-    Let be a two-dimensional time scale
-    $\Lambda^2 = \mathbb{Z} \times \mathbb{Z} \colonequals \{t=(x, b) \colon \; x\in \mathbb{Z}, \; b\in \mathbb{Z} \}$.
-    For every $t\in\mathbb{Z}, \; x,b\in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    \[
-        \finiteDifference{t^{2m+1}}
-        = \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(t, t) \bigg |_{x = t, \; b = t},
-    \]
-    where the forward jump operator $\sigma(t)$ is defined as $\sigma(t) = t+1$.
+    (Divided difference.)
+    Let be a two-dimensional timescale
+    $\Lambda^2 = \mathbb{Z} \times \mathbb{Z}$.
+    For every $t\in\mathbb{Z}$ and $x,b\in \Lambda^2$
+    \begin{align*}
+        \frac{\finiteDifference{x^{2m+1}}}{\Delta x} (t)
+        = \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{m}{b}{x}}{b}(m, \sigma(t), t)
+    \end{align*}
+    where $\sigma(t)$ is the forward jump operator defined as $\sigma(t) = t+1$.
 \end{cor}
 \begin{examp}
     \label{time_scale_z_example_1}
-    Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$ and let $m=1$, then
+    Let be $t \in \mathbb{Z}, \; x,b \in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}$, let $m=1$ then
     \begin{align*}
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = 3 t + 3 t^2\\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}= 1 - 6 b^2 + 6 b x\\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}\bigg |_{x = t, \; b = t}= 1
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}                = -3 b + 3 b^2 \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}                = 1 - 6 b^2 + 6 b x
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get the ordinary finite difference of odd polynomial
-    $t^{2m+1}, \; t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    \[
-        \finiteDifference{t^{3}}
-        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
-        = 3 t^2 + 3 t + 1.
-    \]
+    Evaluating in points yields
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x} (1, \sigma(t), t) = 3 t + 3 t^2 \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(1, t,t)           = 1
+    \end{align*}
+    Summing up previously obtained partial timescale derivatives, we get ordinary finite difference of odd-powered polynomial
+    $x^{3}$ evaluated in point $ t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}$
+    \begin{align*}
+        \finiteDifference{x^{3}}(t)
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} (1, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{1}{b}{x}}{b}(1,t,t)
+        = 3 t + 3 t^2 + 1
+    \end{align*}
 \end{examp}
 \begin{examp}
     \label{time_scale_z_example_2}
-    Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    and let $m=2$, then
+    Let be $t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}$, let $m=2$ then
     \begin{align*}
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} = 5 b - 30 b^2 + 40 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} = 1 + 30 b^4 - 60 b^3 x + 30 b^2 x^2 \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)} = 5 t + 10 t^2 + 10 t^3 + 5 t^4 \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 1
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x}                = 5 b - 30 b^2 + 40 b^3 - 15 b^4 + 10 b x - 30 b^2 x + 20 b^3 x \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b}                = 1 + 30 b^4 - 60 b^3 x + 30 b^2 x^2
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get time ordinary finite difference of odd polynomial
-    $t^{2m+1}, \; t\in\mathbb{Z}, \;x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    \[
-        \finiteDifference{t^{5}}
-        = \pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
-        = 1 + 5 t + 10 t^2 + 10 t^3 + 5 t^4.
-    \]
+    Evaluating in points yields
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (1, \sigma(t), t) = 5 t + 10 t^2 + 10 t^3 + 5 t^4 \\
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (1, t, t)         = 1
+    \end{align*}
+    Summing up previously obtained partial timescale derivatives, we get time ordinary finite difference of odd-powered
+    polynomial $x^{5}$ and $t\in\mathbb{Z}, \; (x,b) \in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}$
+    \begin{align*}
+        \finiteDifference{x^{5}} (t)
+        = \pTsDerivative{\polynomialP{2}{b}{x}}{x} (1, t, \sigma(t))
+        + \pTsDerivative{\polynomialP{2}{b}{x}}{b} (1, t, t)
+        = 1 + 5 t + 10 t^2 + 10 t^3 + 5 t^4
+    \end{align*}
 \end{examp}
 \begin{cor}
     \label{time_scale_z_corollary_1}
-    For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    \[
-        \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+    For every $t\in\mathbb{Z}, \; (x,b) \in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}$
+    \begin{align*}
+        \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
         = \sum_{r=1}^{2m} \binom{2m+1}{r} t^{r}
-    \]
+    \end{align*}
 \end{cor}
 \begin{cor}
     \label{time_scale_z_corollary_2}
-    For every $t\in\mathbb{Z}, \; x,b\in\Lambda^2 = \mathbb{Z} \times \mathbb{Z}, \; m\in\mathbb{N}$
-    \[
-        \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t} = 1
-    \]
+    For every $t\in\mathbb{Z}, \; (x,b) \in \Lambda^2 = \mathbb{Z} \times \mathbb{Z}$
+    \begin{align*}
+        \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t) = 1
+    \end{align*}
 \end{cor}

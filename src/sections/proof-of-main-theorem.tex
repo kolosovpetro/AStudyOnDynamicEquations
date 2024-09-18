@@ -1,21 +1,23 @@
-By [Lemma 3.1~\cite{kolosov2016link}], for every $x\in\mathbb{R}, \; m\in\mathbb{N}$ it is true that
+%! suppress = SuspiciousSectionFormatting
+By~\cite[Lemma 3.1]{kolosov2016link}, for every $x\in\mathbb{R}, \; m\in\mathbb{N}$ it is true that
 \begin{equation}
     \label{eq:odd_power_identity}
     \polynomialP{m}{x}{x} = x^{2m+1}
 \end{equation}
 
-\subsection*{Proof of theorem ~\ref{main_theorem}}
+\subsection{Proof of theorem~\ref{main_theorem}}
+\label{subsec:proof-of-theorem}
 Let be
 $x,b\in \Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2
 \colonequals \{t = (x,b) \colon \; x\in\mathbb{T}_1, \; b\in\mathbb{T}_2\}$.
 Let be $\mathbb{T}_1 = \mathbb{T}_2$.
-Assume that time-scale derivative $(x^{2m+1})^{\Delta}$ is
+Assume that timescale derivative $(x^{2m+1})^{\Delta}$ is
 \begin{equation}
     \label{eq:proof1}
     (x^{2m+1})^{\Delta}
     = \lim \limits_{b \to x}
     \lim \limits_{t \to x}
-    \frac{\polynomialP{m}{\sigma(b)}{\sigma(x)} - \polynomialP{m}{b}{t}}{\sigma(x) - t},
+    \frac{\polynomialP{m}{\sigma(b)}{\sigma(x)} - \polynomialP{m}{b}{t}}{\sigma(x) - t}
 \end{equation}
 where $\sigma(x) > x$ is forward jump operator.
 However, equation ~\eqref{eq:proof1} is not a timescale derivative of $\polynomialP{m}{b}{x}$ over $x$
@@ -46,28 +48,25 @@ Therefore,
 \]
 Now, let's express the nominator of ~\eqref{eq:proof1} as follows
 \begin{align*}
-    \\
     \polynomialP{m}{\sigma(b)}{\sigma(x)} - \polynomialP{m}{b}{x}
     &= \polynomialP{m}{b}{x}^{\Delta}_{x} (x, \sigma(b)) \cdot \Delta x + \polynomialP{m}{b}{x}^{\Delta}_{b} (x,b) \cdot \Delta b \\
-    \\
     \polynomialP{m}{\sigma(b)}{\sigma(x)} - \polynomialP{m}{b}{x}
     &= \polynomialP{m}{b}{x}^{\Delta}_{x} (x, \sigma(b)) \cdot (\sigma(x) - x) + \polynomialP{m}{b}{x}^{\Delta}_{b} (x,b) \cdot (\sigma(b) - b)
-    \\
 \end{align*}
 We can collapse the terms $(\sigma(x) - x), \; (\sigma(b) - b)$ in above expressions, as $b\to x$.
 Therefore,
-\[
+\begin{align*}
     \frac{\polynomialP{m}{\sigma(x)}{\sigma(x)} - \polynomialP{m}{x}{x}}{\sigma(x) - x}
-    = \polynomialP{m}{b}{x}^{\Delta}_{x} (x, \sigma(x))
-    + \polynomialP{m}{b}{x}^{\Delta}_{b} (x, x)
-\]
+    = \polynomialP{m}{b}{x}^{\Delta}_{x} (m, \sigma(x), x)
+    + \polynomialP{m}{b}{x}^{\Delta}_{b} (m, x, x)
+\end{align*}
 Finally, by the identity ~\eqref{eq:odd_power_identity} we can express
 timescale derivative of $x^{2m+1}, \; x\in \Lambda^2 = \mathbb{T}_1 \times \mathbb{T}_2, \; m\in\mathbb{N}$
 as
 \begin{equation*}
 (x^{2m+1})
-    ^{\Delta}(t)= \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-    + \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+    ^{\Delta}(t)= \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(x), x)
+    + \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, x, x)
 \end{equation*}
 
 This completes the proof. \qed

@@ -1,65 +1,67 @@
 In this subsection we discuss a pure quantum power time scale $q^{\mathbb{R}^j}$ provided by Aldwoah, Malinowska
 and Torres in~\cite{aldwoah2011power}, among with the $q-$power derivative operator $\nqderivative{f(t)}$ defined by
-\[
+\begin{align*}
     \nqderivative{f(t)} = \frac{f(qt^n) - f(t)}{qt^n - t},
-\]
+\end{align*}
 where $n$ is odd positive integer and $0 < q < 1$.
 \begin{cor}
 (Quantum power derivative~\cite{aldwoah2011power}.)
     Let be a two-dimensional time scale
     $\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}
     \colonequals \{t=(x,b) \colon \; b \in q^{\mathbb{R}^j}, \; x \in q^{\mathbb{R}^j} \}$.
-    For every $t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; m\in\mathbb{N}$
-    \[
-        \nqderivative{t^{2m+1}}
-        = \pTsDerivative{\polynomialP{m}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t},
-    \]
+    For every $t\in q^{\mathbb{R}^j}, \; (x,b) \in \Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}$
+    \begin{align*}
+        \nqderivative{x^{2m+1}} (t)
+        = \pTsDerivative{\polynomialP{m}{b}{x}}{x} (m, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
+    \end{align*}
     where $\sigma(t) = qt^n, \; \sigma(t) > t$.
 \end{cor}
 \begin{examp}
     \label{time_scale_pure_quantum_power_example_1}
-    Let be $t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; m\in\mathbb{N}$
-    and let $m=1$, then
+    Let be $t\in q^{\mathbb{R}^j}, \; (x,b) \in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}$, let $m=1$ then
     \begin{align*}
         &\pTsDerivative{\polynomialP{1}{b}{x}}{x} = -3 b + 3 b^2 \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b^j q - 2 b^{1 + j} q - 2 b^{2 j} q^2 - 3 x + 3 b x + 3 b^j q x \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}(t, \sigma(t)) = -3 q t^j + 3 q^2 t^{2 j} \\
-        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(t, t) = t^2 + 3 q t^j - 2 q^2 t^{2 j} + q t^{1 + j}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b} = 3 b - 2 b^2 + 3 b^j q - 2 b^{1 + j} q - 2 b^{2 j} q^2 - 3 x + 3 b x + 3 b^j q x
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we get $q-$power derivative of odd polynomial
-    $t^{2m+1}, \; t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; m\in\mathbb{N}$
-    \[
-        \nqderivative{t^{3}}
-        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+    Evaluating in points yields
+    \begin{align*}
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{x}(1, \sigma(t), t) = -3 q t^j + 3 q^2 t^{2 j} \\
+        &\pTsDerivative{\polynomialP{1}{b}{x}}{b}(1, t, t) = t^2 + 3 q t^j - 2 q^2 t^{2 j} + q t^{1 + j}
+    \end{align*}
+    Summing up previously obtained partial timescale derivatives, we get $q-$power derivative of odd-powered polynomial
+    $x^{3}$ evaluated in point $t\in q^{\mathbb{R}^j}$
+    \begin{align*}
+        \nqderivative{x^{3}}(t)
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} (1, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} (1, t, t)
         = t^2 + q^2 t^{2 j} + q t^{1 + j}.
-    \]
+    \end{align*}
 \end{examp}
 
 Another polynomial identity, that is exponential sum holds
 \begin{cor}
     \label{time_scale_pure_quantum_power_corollary_1}
-    For every $t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; t\in\mathbb{R}, \; m\in\mathbb{N}$
-    \[
-        \lim \limits_{j \to 0} \lim \limits_{q \to 1} \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+    For every $t\in q^{\mathbb{R}^j}, \; (x,b) \in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; t\in\mathbb{R}$
+    \begin{align*}
+        \lim \limits_{j \to 0} \lim \limits_{q \to 1} \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
         = \sum_{k=0}^{2m} t^k
-    \]
+    \end{align*}
 \end{cor}
 
 An identity in even polynomials holds too
 \begin{cor}
     \label{time_scale_pure_quantum_power_corollary_2}
-    For every $t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; t\in\mathbb{R}, \; m\in\mathbb{N}$
-    \[
-        \lim \limits_{j \to 0} \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+    For every $t\in q^{\mathbb{R}^j}, \; (x,b) \in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}$
+    \begin{align*}
+        \lim \limits_{j \to 0} \lim \limits_{q \to 0} \pTsDerivative{\polynomialP{m}{b}{x}}{b} (m, t, t)
         = t^{2m}
-    \]
+    \end{align*}
 \end{cor}
 
 \begin{examp}
     \label{time_scale_pure_quantum_power_example_2}
-    Let be $t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; m\in\mathbb{N}$ and let $m=2$, then
+    Let be $t\in q^{\mathbb{R}^j}, \; (x,b) \in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}$, let $m=2$ then
     \begin{align*}
         \pTsDerivative{\polynomialP{2}{b}{x}}{x}
         &= -15 b^2 + 30 b^3 - 15 b^4 + 5 b x - 15 b^2 x + 10 b^3 x + 5 b q x^j - 15 b^2 q x^j + 10 b^3 q x^j \\
@@ -69,19 +71,20 @@ An identity in even polynomials holds too
         &+ 30 b^{1 + j} q x - 15 b^{2 + j} q x + 30 b^{2 j} q^2 x - 15 b^{1 + 2 j} q^2 x - 15 b^{3 j} q^3 x + 5 x^2 - 15 b x^2 \\
         &+ 10 b^2 x^2 - 15 b^j q x^2 + 10 b^{1 + j} q x^2 + 10 b^{2 j} q^2 x^2
     \end{align*}
+    Evaluation in points yields
     \begin{align*}
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{x} (2, \sigma(t), t)
         = -10 q^2 t^{2 j} + 15 q^3 t^{3 j} - 5 q^4 t^{4 j} + 5 q t^{1 + j} - 15 q^2 t^{1 + 2 j} + 10 q^3 t^{1 + 3 j} \\
-        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} \bigg |_{x = t, \; b = t}
+        &\pTsDerivative{\polynomialP{2}{b}{x}}{b} (2, t, t)
         = t^4 + 10 q^2 t^{2 j} - 15 q^3 t^{3 j} + 6 q^4 t^{4 j} - 5 q t^{1 + j} + q t^{3 + j} + 15 q^2 t^{1 + 2 j}
         + q^2 t^{2 + 2 j} - 9 q^3 t^{1 + 3 j}
     \end{align*}
-    Summing up previously obtained partial time-scale derivatives, we $q-$power derivative of odd polynomial
-    $t^{2m+1}, \; t\in q^{\mathbb{R}^j}, \; x,b\in\Lambda^2 = q^{\mathbb{R}^j} \times q^{\mathbb{R}^j}, \; m\in\mathbb{N}$
-    \[
-        \nqderivative{t^{5}}
-        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} \bigg |_{x = t, \; b = \sigma(t)}
-        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} \bigg |_{x = t, \; b = t}
-        = t^4 + q^4 t^{4 j} + q t^{3 + j} + q^2 t^{2 + 2 j} + q^3 t^{1 + 3 j}.
-    \]
+    Summing up previously obtained partial timescale derivatives, we $q-$power derivative of odd polynomial
+    $x^{5}$ evaluated in point $t\in q^{\mathbb{R}^j}$
+    \begin{align*}
+        \nqderivative{x^{5}} (t)
+        = \pTsDerivative{\polynomialP{1}{b}{x}}{x} (2, \sigma(t), t)
+        + \pTsDerivative{\polynomialP{1}{b}{x}}{b} (2, t, t)
+        = t^4 + q^4 t^{4 j} + q t^{3 + j} + q^2 t^{2 + 2 j} + q^3 t^{1 + 3 j}
+    \end{align*}
 \end{examp}
